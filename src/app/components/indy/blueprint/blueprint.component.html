@@ -1,0 +1,34 @@
+<div *ngIf="blueprint !== null">
+  <h2>{{blueprint.typeName}}</h2>
+
+  <!-- <div>{{blueprint.description}}</div>
+  <div>{{blueprint.basePrice}} ISK</div> -->
+  ME: <input type="number" min="0" max="10" (change)="adjustBlueprintME($event.target.value)"/>
+  <!-- <ul> -->
+  <mat-tab-group>
+    <mat-tab label="Materials">
+      <table>
+        <tr><td>Name</td><td>Base</td><td *ngIf="Object.keys(computedItems).length > 0">Modified</td></tr>
+        <tr *ngFor="let mat of blueprint.requiredItems">
+          <td>{{mat.name}}</td>
+          <td>{{mat.quantity}}</td>
+          <td *ngIf="computedItems[mat.id]">{{computedItems[mat.id].quantity}}</td>
+          <!-- <td *ngIf="!mat.blueprint"></td>
+          <td *ngIf="mat.blueprint">
+            <a class="btn" (click)="buyOrBuild(mat.blueprint)">Buy or Build</a> -->
+            <!-- <span>Hello World</span> -->
+            <!-- <app-blueprint [blueprint]="mat.blueprint"></app-blueprint> -->
+          <!-- </td> -->
+        </tr>
+      </table>
+    </mat-tab>
+    <mat-tab label="Raw Materials">
+      Sample Stuff.
+    </mat-tab>
+  </mat-tab-group>
+  
+    <!-- <div *ngFor="let mat of blueprint.requiredItems">
+      {{mat.name}}: {{mat.quantity}}
+    </div> -->
+  <!-- </ul> -->
+</div>

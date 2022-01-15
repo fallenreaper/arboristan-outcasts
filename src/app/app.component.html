@@ -1,0 +1,57 @@
+<div class="header navbar-expand-lg navbar navbar-dark bg-dark">
+  <div class="navbar-brand hover" [routerLink]="['/']">Arboristan Outlaws</div>
+  <!-- data-toggle collapse seems to be causing some visual issues. We will resolve it.  Hacks show it now, but will not animate.-->
+  <button class="navbar-toggler" type="button" data-target="#navbarNav" data-toggle="collapse" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleHamburger()">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-collapse" id="navbarNav" [class.collapse]="isHeaderExpanded"> 
+    <ul class="navbar-nav">
+      <!-- I will want a way to assign the active class dynamically -->
+      <li class="nav-item">
+          <a class="nav-link" href="#" [routerLink]="['/']" routerLinkActive="router-link-active">Home</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#" [routerLink]="['/about']" routerLinkActive="router-link-active">About</a>
+      </li>
+      <!-- <li class="nav-item">
+          <a class="nav-link" href="#" [routerLink]="['/alliance']" routerLinkActive="router-link-active">Alliance</a>
+      </li> -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="#" [routerLink]="['/industry']" routerLinkActive="router-link-active">Industry</a>
+      </li> -->
+    </ul>
+  </div>
+</div>
+<div>
+  <section class="section section-md bg-default context-dark section-height-1 box-transform-wrap bg-image" style="height: 300px; background-image: url(assets/images/spacebg.jpg);">
+  <div class="container">
+    <div class="row">
+      <div class="col offset-md-1">
+        <div class="post-erin">
+          <h5 class="post-erin-subtitle">Welcome to</h5>
+          <h1 class="post-erin-title">Arboristan Outlaws!</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="box-transform" style="background-image: url(assets/images/spacebg.jpg);"></div>
+  <div class="comets comets-left comets-long"></div>
+  <div class="comets comets-center comets-long"></div>
+  <div class="comets comets-top comets-long"></div>
+</section>
+  <router-outlet></router-outlet>
+</div>
+<!-- <div id="footer">
+  <div id="footer-left"></div>
+  <div id="footer-center"></div>
+  <div id="footer-right">
+    <span>
+      <i class="icon ion-logo-twitter" title="Twitter">#{{twitterHandle}}</i>
+    </span>
+    <span>
+      <a href="mailto:{{emailContact}}">
+        <i class="icon ion-md-mail" title="Email">{{emailContact}}</i>
+      </a>
+    </span>
+  </div>
+</div> -->
