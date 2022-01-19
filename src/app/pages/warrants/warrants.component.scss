@@ -17,5 +17,22 @@
       margin-right: auto;
     }
   }
+}
 
+iframe {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  tr {
+    background-color: #450905;
+    border-bottom: solid 1px darkgrey;
+    a {
+      color: #2a9fd6;
+    }
+  }
 }
